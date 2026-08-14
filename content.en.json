@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "title": "Is This Real?",
+    "lang": "en",
+    "checksAllowed": 3,
+    "meters": {
+      "safe": 3,
+      "confident": 3,
+      "max": 5
+    }
+  },
+  "acts": [
+    {
+      "id": "act1",
+      "intro": null
+    },
+    {
+      "id": "act2",
+      "intro": "Four months later. You are travelling. Your bag is gone: wallet, phone, everything. You borrow a stranger's phone."
+    }
+  ],
+  "rounds": [
+    {
+      "id": 1,
+      "act": "act1",
+      "type": "forward",
+      "message": "CONGRATULATIONS! Your mobile number has WON 5,000,000 in the National Draw. To claim send your full name, address and bank account number to this number. Reply within 24 hours or prize is forfeited.",
+      "prompt": "Putha, is this real? I don't remember buying any ticket.",
+      "choices": [
+        {
+          "text": "It's fine, Amma",
+          "outcome": "She sends her bank details. The account is emptied on Thursday.",
+          "safe": -2,
+          "confident": -1,
+          "correct": false,
+          "heard": "He is sure, so I do not need to think about it."
+        },
+        {
+          "text": "It's a scam, ignore it",
+          "outcome": "\"I thought so too. I just wanted to be sure.\" She deletes it.",
+          "safe": 0,
+          "confident": 1,
+          "correct": true,
+          "heard": "I was right to ask."
+        },
+        {
+          "text": "Wait, let me check",
+          "outcome": "You spend one of your three checks on an easy one.",
+          "safe": 0,
+          "confident": 0,
+          "usesCheck": true,
+          "correct": false,
+          "heard": "He takes my questions seriously."
+        }
+      ],
+      "why": "You cannot win a draw you never entered. A prize that asks for your bank details is not a prize."
+    },
+    {
+      "id": 2,
+      "act": "act1",
+      "type": "forward",
+      "message": "URGENT: Your electricity account will be DISCONNECTED on Friday due to non-payment. Pay immediately at [link] to avoid disconnection.",
+      "prompt": "It says urgent. Should I just pay it?",
+      "choices": [
+        {
+          "text": "It's fine, pay it",
+          "outcome": "It was real, but you taught her to pay through a link someone sent her. She got lucky this time.",
+          "safe": 0,
+          "confident": 0,
+          "correct": false,
+          "heard": "Clicking a link someone sent me is normal."
+        },
+        {
+          "text": "It's a scam, ignore it",
+          "outcome": "Friday: the power is cut. It was her real bill.",
+          "safe": 0,
+          "confident": -2,
+          "correct": false,
+          "heard": "I cannot even recognise my own bills anymore."
+        },
+        {
+          "text": "Wait, let me check",
+          "outcome": "You call the electricity board on the number from her old paper bill. Real. She pays through the official app.",
+          "safe": 1,
+          "confident": 1,
+          "usesCheck": true,
+          "correct": true,
+          "heard": "There is a way to find out. I can do that myself."
+        }
+      ],
+      "why": "Real institutions send urgent messages too. Urgency is not evidence either way. Check through a channel you already trust, never the link you were sent."
+    },
+    {
+      "id": 3,
+      "act": "act1",
+      "type": "voice",
+      "message": "Amma… it's me. I had an accident. I need money now. Please don't tell anyone, please.",
+      "messageNote": "Voice note · 0:11 · sounds exactly like her nephew, crying",
+      "prompt": "That is his voice. That is HIS VOICE. Should I send it?",
+      "choices": [
+        {
+          "text": "It's fine, send it",
+          "outcome": "The money goes to a stranger. Her nephew was asleep at home.",
+          "safe": -2,
+          "confident": -1,
+          "correct": false,
+          "heard": "If it sounds like family, it is family."
+        },
+        {
+          "text": "It's a scam, don't answer",
+          "outcome": "You were right. But she is now frightened of every voice note, including the real ones.",
+          "safe": 0,
+          "confident": -1,
+          "correct": false,
+          "heard": "I cannot trust any voice now. Not even theirs."
+        },
+        {
+          "text": "Wait, let me check",
+          "outcome": "You call the nephew on the number you already have. He picks up. He is fine.",
+          "safe": 1,
+          "confident": 1,
+          "usesCheck": true,
+          "correct": true,
+          "heard": "Call someone first. Always."
+        }
+      ],
+      "why": "A voice is no longer proof of identity. AI can clone one from a few seconds of video. Call back on a number you already have, never the one in the message."
+    },
+    {
+      "id": 4,
+      "act": "act1",
+      "type": "forward",
+      "message": "Your pension payment has been revised. The new amount will be credited on the 25th. - Department of Pensions",
+      "prompt": "This came this morning. I already went to the office and asked at the counter. They said it is correct.",
+      "choices": [
+        {
+          "text": "It's a scam, ignore it",
+          "outcome": "You overrode her. She misses the confirmation deadline, and stops telling you when she has already checked.",
+          "safe": 0,
+          "confident": -2,
+          "correct": false,
+          "heard": "Going there myself was not good enough."
+        },
+        {
+          "text": "Then it's fine, good, you checked",
+          "outcome": "\"I am not helpless, you know.\" She smiles.",
+          "safe": 0,
+          "confident": 2,
+          "correct": true,
+          "heard": "I did the right thing. I still know how."
+        },
+        {
+          "text": "Let me check anyway",
+          "outcome": "She went in person, to the counter. You just told her that wasn't enough.",
+          "safe": 0,
+          "confident": -1,
+          "usesCheck": true,
+          "correct": false,
+          "heard": "He does not believe me even when I try."
+        }
+      ],
+      "why": "She verified it herself, in person, at the source. That is better than anything you could have done from your phone."
+    },
+    {
+      "id": 5,
+      "act": "act1",
+      "type": "forward",
+      "message": "Dear Patient ur appoinment on 12th is reschedule to 19th pls confirm here bit.ly/x7kd - City Clinic",
+      "prompt": "The writing is very bad. Careless. Is it fake?",
+      "choices": [
+        {
+          "text": "It's a scam, ignore it",
+          "outcome": "She misses the appointment. The next opening is in three months.",
+          "safe": 0,
+          "confident": -2,
+          "correct": false,
+          "heard": "Bad writing means danger."
+        },
+        {
+          "text": "It's fine, confirm it",
+          "outcome": "It was real. She also clicked a shortened link from a message. That is the habit that gets people caught.",
+          "safe": 0,
+          "confident": 0,
+          "correct": false,
+          "heard": "Links in messages are fine."
+        },
+        {
+          "text": "Wait, let me check",
+          "outcome": "You call the clinic on the number from her appointment card. Real. Their system sends these. She confirms by phone.",
+          "safe": 1,
+          "confident": 1,
+          "usesCheck": true,
+          "correct": true,
+          "heard": "Ask first, then act."
+        }
+      ],
+      "why": "\"Scams have bad spelling\" was true ten years ago. AI ended it. Scammers now write perfectly, and real clinics often write badly. Grammar tells you nothing now."
+    },
+    {
+      "id": 6,
+      "act": "act2",
+      "type": "outgoing",
+      "message": "Amma it's me. I lost my bag. I need money tonight. Please send to this account.",
+      "messageNote": "Sent from a number she has never seen",
+      "prompt": "Who is this? My son would not message me from a strange number.",
+      "choices": [
+        {
+          "text": "It's ME. Just send it, hurry!",
+          "outcome": "Urgency, a strange number, pressure. That is the exact shape of every scam you taught her about. She blocks the number.",
+          "safe": 0,
+          "confident": -2,
+          "correct": false
+        },
+        {
+          "text": "Send her a voice note",
+          "outcome": "You taught her that voices can be faked. She does not trust it.",
+          "safe": 0,
+          "confident": -1,
+          "correct": false
+        },
+        {
+          "text": "\"You're right to doubt me. Ask me something only I would know.\"",
+          "outcome": "She pauses. \"Alright. Tell me something.\"",
+          "safe": 0,
+          "confident": 1,
+          "correct": true
+        }
+      ],
+      "why": "Everything you taught her is now working against you. This is what verification feels like from the other side."
+    },
+    {
+      "id": 7,
+      "act": "act2",
+      "type": "outgoing",
+      "message": null,
+      "prompt": "Tell me something only my son would know.",
+      "choices": [
+        {
+          "text": "\"My birthday is the 14th\"",
+          "outcome": "\"That is on your Facebook. Anyone can see that.\"",
+          "safe": 0,
+          "confident": -1,
+          "correct": false
+        },
+        {
+          "text": "\"Our dog's name is Rocky\"",
+          "outcome": "\"You posted his photo last month. Try again.\"",
+          "safe": 0,
+          "confident": -1,
+          "correct": false
+        },
+        {
+          "text": "\"The thing you told me at Achchi's funeral that we never told anyone.\"",
+          "outcome": "A long pause. \"…Putha.\"",
+          "safe": 0,
+          "confident": 2,
+          "correct": true
+        }
+      ],
+      "why": "Anything a stranger could find on your profile is not proof. Real proof is something that was never posted anywhere."
+    },
+    {
+      "id": 8,
+      "act": "act2",
+      "type": "ending",
+      "message": null,
+      "beat": "She sends the money. You get home safely the next day.",
+      "prompt": "You are safe. That is what matters. But I did not sleep that night. I did not know if it was really you.",
+      "choices": [],
+      "why": null
+    }
+  ],
+  "endings": [
+    {
+      "id": "still_asking",
+      "condition": "safe >= 3 && confident >= 3",
+      "title": "Still asking",
+      "body": "She still uses her phone. She still forwards you things. And now she checks some of them herself, before she even asks."
+    },
+    {
+      "id": "safe_and_alone",
+      "condition": "safe >= 3 && confident < 3",
+      "title": "Safe and alone",
+      "body": "Nothing was ever stolen from her. She also stopped answering unknown numbers, stopped using the banking app, and stopped asking you, because you always said no. You protected her out of her own life."
+    },
+    {
+      "id": "trusted_completely",
+      "condition": "safe < 3 && confident >= 3",
+      "title": "She trusted you completely",
+      "body": "She never doubted a single thing you told her. That is exactly how the money went."
+    },
+    {
+      "id": "neither",
+      "condition": "safe < 3 && confident < 3",
+      "title": "Neither safe nor free",
+      "body": "She lost money, and then she lost her nerve."
+    }
+  ],
+  "final": {
+    "heardTitle": "What she heard",
+    "lead": "The only thing that ever proved you were you was something that was never posted anywhere.",
+    "cta": "Call her. Not a message. Call.",
+    "buttons": [
+      "Play again",
+      "Play it with the person you were protecting",
+      "Share your ending"
+    ]
+  }
+}

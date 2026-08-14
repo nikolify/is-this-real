@@ -1,0 +1,16 @@
+# UNESCO mentoring materials. These are the speakers' and UNESCO's
+# presentation decks, not ours to republish. Keep them local.
+*.pdf
+
+# Team-internal notes. These contain our strategy and the answers to every
+# round. Delete these two lines if you decide you want them public.
+TEAM-BRIEF-Is-This-Real.md
+GAME-DESIGN-Is-This-Real.md
+
+# Local tooling
+.claude/
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

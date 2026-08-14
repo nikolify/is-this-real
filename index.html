@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Is This Real?</title>
+<meta name="description" content="A game where believing the lie loses, and refusing to believe the truth loses too.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone">
+
+  <!-- ===== Meters ===== -->
+  <header class="hud" id="hud" hidden>
+    <div class="meter">
+      <span class="meter-label">Safe</span>
+      <div class="bar"><i id="bar-safe" style="width:60%"></i></div>
+    </div>
+    <div class="meter">
+      <span class="meter-label">Confident</span>
+      <div class="bar bar-warm"><i id="bar-confident" style="width:60%"></i></div>
+    </div>
+    <div class="checks" id="checks" title="Times you can still check something">🔍 3</div>
+  </header>
+
+  <!-- ===== Screens ===== -->
+  <main id="screen"></main>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
